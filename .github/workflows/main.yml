@@ -42,14 +42,14 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@main
       with:
-        python-version: 3.12
+        python-version: 3.11
         cache: "pip"
 
     - name: Install requirements
       working-directory: ./hexo_circle_of_friends
       run: |
         pip install --upgrade 'pip<24.1'
-        pip install --upgrade python3
+        pip install --upgrade python3.11
         pip install -r requirements.txt
 
     - name: set env
